@@ -7,4 +7,10 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+
+  resources :about, only: [:index]
+  namespace :admin do
+    root to: 'dashboard#show'
+    resources :products, except: [:edit, :update, :show]
+  end
 end
