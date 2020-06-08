@@ -1,6 +1,4 @@
 class CommentsController < ApplicationController
-  protect_from_forgery prepend: true
-  before_action :authenticate_user!
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(comment_params)
