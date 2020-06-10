@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
   # Get Form Route Handler
   def new
     @article = Article.new
+    @image = Image.new
   end
 
   # Get to edit
