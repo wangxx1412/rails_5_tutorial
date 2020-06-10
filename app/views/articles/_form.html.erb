@@ -34,15 +34,12 @@
     </div>
   <% end %>
 
-
-
   <div class="control-group">
     <%= form.label :picture, :class => 'control-label' %>
     <div class="controls">
       <%= form.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
     </div>
   </div>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")), articles_path, :class => 'btn btn-default' %>
   
   <p>
     <%= form.label :text %><br>
