@@ -23,12 +23,19 @@ class ArticlesController < ApplicationController
   # Post Form Route Handler
   def create
     @article = Article.new(article_params)
- 
+    @image = @article.images.new(params.require(:article).permit(:picture))
+   
+    p @image.picture
+
     if @article.save
-      redirect_to @article
+      if @image.save
+        p @image
+        redirect_to @article
+      end
     else
       render 'new'
     end
+
   end
 
   def update
