@@ -11,7 +11,7 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'jquery-rails'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'fog-aws'
 
 # Use Puma as the app server
